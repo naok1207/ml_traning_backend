@@ -21,4 +21,6 @@ end
 
 group :development do
   gem "graphiql-rails"
+  # graphiql動作に必要
+  gem "sass-rails"
 end
