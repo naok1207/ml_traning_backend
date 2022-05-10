@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: backend_development
+  database: ml_traning_development
 
 test:
   <<: *default
-  database: backend_test
+  database: ml_traning_test
 
 production:
   <<: *default
-  database: backend_production
+  database: ml_traning_production
   username: backend
   password: <%= ENV["BACKEND_DATABASE_PASSWORD"] %>
