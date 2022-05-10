@@ -13,10 +13,12 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 # Add gems
+gem "graphql"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
 group :development do
+  gem "graphiql-rails"
 end
