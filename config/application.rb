@@ -39,5 +39,9 @@ module Backend
     # graphiql動作設定
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+
+    # タイムゾーン設定
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
   end
 end
