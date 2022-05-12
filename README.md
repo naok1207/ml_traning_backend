@@ -1,24 +1,12 @@
-# README
+# ml_traning backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### frontend github
 
-Things you may want to cover:
+https://github.com/naok1207/ml_traning_frontend
 
-* Ruby version
+### zenn scrap
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+環境構築
+https://zenn.dev/naok_1207/scraps/4c5ca57019f95f
+react v18
+https://zenn.dev/naok_1207/scraps/b22815930b6941
