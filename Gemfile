@@ -13,6 +13,9 @@ gem "bootsnap", require: false
 gem "rack-cors"
 
 # Add gems
+gem "devise"
+gem "devise-jwt"
+gem "fast_jsonapi"
 gem "graphql"
 
 group :development, :test do
