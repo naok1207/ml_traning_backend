@@ -22,7 +22,8 @@ end
 
 group :development do
   gem "graphiql-rails"
+  gem "retrieva-cop", require: false
+  gem 'rubocop-graphql', require: false
   # graphiql動作に必要
   gem "sass-rails"
-  gem "retrieva-cop", require: false
 end
