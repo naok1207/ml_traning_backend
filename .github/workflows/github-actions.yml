@@ -67,5 +67,10 @@ jobs:
           ruby-version: 3.1.0
           bundler-cache: true
 
+      - name: setup bundle
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3 --path vendor/bundle
+
       - name: Run rubocop
         run: bundle exec rubocop
