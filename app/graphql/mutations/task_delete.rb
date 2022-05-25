@@ -5,9 +5,9 @@ module Mutations
     field :id, ID, null: false
 
     def resolve(id:)
-      task = Task.find(id).delete
+      Task.find(id).delete
 
-      { id: id }
+      { id: }
     rescue => e
       GraphQL::ExecutionError.new(e.message)
     end

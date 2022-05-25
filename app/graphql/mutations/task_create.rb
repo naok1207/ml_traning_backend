@@ -7,7 +7,7 @@ module Mutations
     def resolve(params:)
       task = Task.create!(params.to_h)
 
-      { task: task }
+      { task: }
     rescue => e
       GraphQL::ExecutionError.new(e.message)
     end

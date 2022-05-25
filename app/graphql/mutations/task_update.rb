@@ -9,7 +9,7 @@ module Mutations
       task = Task.find(id)
       task.update!(params.to_h)
 
-      { task: task }
+      { task: }
     rescue => e
       GraphQL::ExecutionError.new(e.message)
     end
