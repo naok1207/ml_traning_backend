@@ -12,3 +12,12 @@ AllCops:
   TargetRubyVersion: 3.1
   # comment unless use rails cops
   TargetRailsVersion: 7.0
+
+GraphQL/ObjectDescription:
+  Enabled: false
+
+GraphQL/ArgumentDescription:
+  Enabled: false
+
+GraphQL/FieldDescription:
+  Enabled: false
