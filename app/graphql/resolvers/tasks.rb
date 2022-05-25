@@ -1,5 +1,5 @@
-module Queries
-  class Tasks < Queries::BaseQuery
+module Resolvers
+  class Tasks < Resolvers::BaseQuery
     type [ObjectTypes::Task], null: false
 
     def resolve

@@ -1,5 +1,5 @@
-module Queries
-  class Task < Queries::BaseQuery
+module Resolvers
+  class Task < Resolvers::BaseQuery
     argument :id, ID, required: true
 
     type ObjectTypes::Task, null: false
