@@ -1,5 +1,5 @@
 module Resolvers
-  class Tasks < Resolvers::BaseQuery
+  class Tasks < Resolvers::AuthQuery
     type [ObjectTypes::Task], null: false
 
     def resolve

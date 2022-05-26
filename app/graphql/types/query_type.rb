@@ -7,5 +7,6 @@ module Types
 
     field :task,  resolver: Resolvers::Task
     field :tasks, resolver: Resolvers::Tasks
+    field :current_user, resolver: Resolvers::CurrentUser
   end
 end

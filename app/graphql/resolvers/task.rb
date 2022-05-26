@@ -1,5 +1,5 @@
 module Resolvers
-  class Task < Resolvers::BaseQuery
+  class Task < Resolvers::AuthQuery
     argument :id, ID, required: true
 
     type ObjectTypes::Task, null: false
