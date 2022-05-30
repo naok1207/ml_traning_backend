@@ -65,4 +65,6 @@ Rails.application.configure do
   # graphiql動作設定
   config.middleware.use ActionDispatch::Cookies
   config.middleware.use ActionDispatch::Session::CookieStore
+
+  config.action_mailer.default_url_options = {  host: 'localhost', port: ENV.fetch('PORT', 3000) }
 end
