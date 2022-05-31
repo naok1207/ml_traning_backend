@@ -5,4 +5,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :validatable, :recoverable,
          :jwt_authenticatable, jwt_revocation_strategy: self
+
+  has_many :tasks, dependent: :destroy
 end
