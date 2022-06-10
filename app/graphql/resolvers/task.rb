@@ -5,7 +5,8 @@ module Resolvers
     type ObjectTypes::Task, null: false
 
     def resolve(id:)
-      ::Task.find(id)
+      user = context[:current_user]
+      user.tasks.find(id)
     end
   end
 end
