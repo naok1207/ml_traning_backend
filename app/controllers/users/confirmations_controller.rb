@@ -16,6 +16,6 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
   end
 
   def confirmation_failed
-    render json: { message: "Something went wrong." }
+    render json: { message: 'Something went wrong.' }
   end
 end

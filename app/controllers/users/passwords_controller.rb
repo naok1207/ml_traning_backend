@@ -4,7 +4,7 @@ class Users::PasswordsController < Devise::PasswordsController
   private
 
   def respond_with(resource, _opts = {})
-    send_reset_mail_success && return unless resource.present?
+    send_reset_mail_success && return if resource.blank?
     reset_password_success && return if resource.persisted?
 
     reset_password_failed
@@ -19,6 +19,6 @@ class Users::PasswordsController < Devise::PasswordsController
   end
 
   def reset_password_failed
-    render json: { message: "Something went wrong." }
+    render json: { message: 'Something went wrong.' }
   end
 end
