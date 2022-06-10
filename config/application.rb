@@ -39,5 +39,18 @@ module Backend
     # タイムゾーン設定
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: 'smtp.gmail.com',
+      port: 587,
+      domain: 'gmail.com',
+      user_name: ENV.fetch('SMTP_USER_NAME', nil),
+      password: ENV.fetch('SMTP_PASSWORD', nil),
+      authentication: :login,
+      enable_starttls_auto: true,
+      open_timeout: 5,
+      read_timeout: 5
+    }
   end
 end

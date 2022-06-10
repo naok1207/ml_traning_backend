@@ -1,9 +1,10 @@
 module Resolvers
-  class Tasks < Resolvers::BaseQuery
+  class Tasks < Resolvers::AuthQuery
     type [ObjectTypes::Task], null: false
 
     def resolve
-      ::Task.all.order(:id)
+      user = context[:current_user]
+      user.tasks.order(:id)
     end
   end
 end

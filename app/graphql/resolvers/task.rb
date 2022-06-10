@@ -1,11 +1,12 @@
 module Resolvers
-  class Task < Resolvers::BaseQuery
+  class Task < Resolvers::AuthQuery
     argument :id, ID, required: true
 
     type ObjectTypes::Task, null: false
 
     def resolve(id:)
-      ::Task.find(id)
+      user = context[:current_user]
+      user.tasks.find(id)
     end
   end
 end
